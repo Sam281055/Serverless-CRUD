@@ -23,17 +23,24 @@ functions:
           path: /
           method: get
   createTask:
-    handler: src/addTask.addTask
+    handler: src/addTasks.addTasks
     events:
       - httpApi:
           path: /tasks
           method: post
-  getTask:
-    handler: src/getTask.getTask
+  getTasks:
+    handler: src/getTasks.getTasks
     events:  
       - httpApi:
           path: /getTasks
           method: get
+  getTask:
+    handler: src/getTask.getTask
+    events:
+      - httpApi:
+          path: /getTasks/{id}
+          method: get
+
 
 resources:
   Resources:
